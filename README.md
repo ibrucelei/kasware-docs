@@ -14,11 +14,13 @@ For KasWare Wallet users, we strongly suggest choosing 111111 coin type, which i
 IMPORTANT: KDX wallets are not BIP-32 compatible, so KDX derivation path is supported but is considered deprecated.
 ## Contact
 Please contact us at:
-- Telegram https://t.me/+eBTwLzz_BcwwMmE1
-- Discord https://discord.gg/yj7mNpwd.
+- Telegram [https://t.me/+eBTwLzz_BcwwMmE1](https://t.me/+eBTwLzz_BcwwMmE1)
+- Discord [https://discord.gg/yj7mNpwd](https://discord.gg/yj7mNpwd)
 ## Donation
+Our receive address is ***kaspadev:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzz2v0u999v***.
+
 Thanks for your support!
 
 The donation will be used to to keep our engineers fueled with ☕ so they can code through the night, delivering even more fantastic features to you!
 
-Once you have made the donation, kindly reach out to us so we can express our gratitude and include your name on our esteemed donor list, acknowledging your generous contribution to our cause.
+Once you have made the donation, kindly reach out to us so we can express our gratitude and include your name on [our esteemed donor list]("www.kaspa.org"), acknowledging your generous contribution to our cause.

@@ -3,3 +3,4 @@
 * [KasWare Wallet](README.md)
 * [Integration](Integration.md)
 * [Legal DisClaimer](LegalDisClaimer.md)
+* [Esteemed Donor List](EsteemedDonorList.md)
