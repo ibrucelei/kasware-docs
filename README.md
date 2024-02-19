@@ -23,4 +23,4 @@ Thanks for your support!
 
 The donation will be used to to keep our engineers fueled with ☕ so they can code through the night, delivering even more fantastic features to you!
 
-Once you have made the donation, kindly reach out to us so we can express our gratitude and include your name on [our esteemed donor list](https://kasware.gitbook.io/wallet/esteemeddonorlist), acknowledging your generous contribution to our cause.
+Once you have made the donation, kindly reach out to us so we can express our gratitude and include your name on [our esteemed donor list](./EsteemedDonorList.md), acknowledging your generous contribution to our cause.
