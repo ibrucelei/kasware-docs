@@ -4,3 +4,4 @@
 * [Integration](Integration.md)
 * [Legal DisClaimer](LegalDisclaimer.md)
 * [Esteemed Donor List](EsteemedDonorList.md)
+* [Private Policy](PrivatePolicy.md)
