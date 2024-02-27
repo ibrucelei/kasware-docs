@@ -1,5 +1,7 @@
 # Integration with KasWare Wallet
 Welcome to KasWare's integration documentation. This documentation is for learning to integrate KasWare wallet with your applications.
+  
+**Please note** : The integration API may be modified if relevant standards are officially released by kaspa core team one day in the future .
 ## Getting Started
 First of all, install KasWare Wallet on your development machine. Once KasWare Wallet is installed and running, you should find that new browser tabs have a window.kasware object available in the developer console. This is how your website will interact with KasWare Wallet.
 ### Browser Detection
@@ -11,7 +13,7 @@ if (typeof window.kasware !== 'undefined') {
 ```
 You can review the full API for the window.kasware object here.
 ### Connecting to KasWare Wallet
-"Connecting" or "logging in" to KasWare Wallet effectively means "to access the user's Bitcoin account(s)".
+"Connecting" or "logging in" to KasWare Wallet effectively means "to access the user's Kaspa account(s)".
 
 You should **only** initiate a connection request in response to direct user action, such as clicking a button. You should **always** disable the "connect" button while the connection request is pending. You should **never** initiate a connection request on page load.
 
@@ -39,7 +41,7 @@ try {
 } catch (e) {
   console.log('connect failed');
 }
-> connect success ['tb1qrn7tvhdf6wnh790384ahj56u0xaa0kqgautnnz']
+> connect success ['kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq']
 ```
 ### getAccounts
 ```javascript
@@ -58,7 +60,7 @@ try {
 } catch (e) {
   console.log(e);
 }
-> ["tb1qrn7tvhdf6wnh790384ahj56u0xaa0kqgautnnz"]
+> ["kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq"]
 ```
 ### getNetwork
 ```javascript
@@ -86,13 +88,13 @@ kasware.switchNetwork(network)
 ```
 switch network
 #### Parameters
-- network - string: the network. livenet and testnet
+- network - string: the network. mainnet/testnet/devnet
 #### Returns
 none
 #### Example
 ```javascript
 try {
-  let res = await window.kasware.switchNetwork("livenet");
+  let res = await window.kasware.switchNetwork("mainnet");
   console.log(res)
 } catch (e) {
   console.log(e);
@@ -146,9 +148,9 @@ try {
     "total":100000
   }
 ```
-### sendBitcoin
+### sendKaspa
 ```javascript
-kasware.sendBitcoin(toAddress, satoshis, options)
+kasware.sendKaspa(toAddress, satoshis, options)
 ```
 Send BTC
 #### Parameters
@@ -161,7 +163,7 @@ Send BTC
 #### Example
 ```javascript
 try {
-  let txid = await window.kasware.sendBitcoin("tb1qrn7tvhdf6wnh790384ahj56u0xaa0kqgautnnz",1000);
+  let txid = await window.kasware.sendKaspa("kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq",1000);
   console.log(txid)
 } catch (e) {
   console.log(e);
