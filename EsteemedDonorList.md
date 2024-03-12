@@ -1,7 +1,7 @@
 # Esteemed Donor List
 |Name|Donation Amount|
 |-|-|
-|Lucy|1,000KAS|
+|xx|xx KAS|
 
 
 ---
