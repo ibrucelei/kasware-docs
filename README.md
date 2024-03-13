@@ -25,7 +25,7 @@ For KasWare Wallet users, we strongly suggest choosing 111111 coin type, which i
 Please contact us at:
 - Telegram **[https://t.me/+eBTwLzz_BcwwMmE1](https://t.me/+eBTwLzz_BcwwMmE1)**
 - Discord **[https://discord.gg/Hx8fVpsW](https://discord.gg/Hx8fVpsW)**
-- Githbub **[https://github.com/kasware](https://github.com/kasware-wallet)**
+- Githbub **[https://github.com/kasware-wallet](https://github.com/kasware-wallet)**
 ## Donation
 Our receive address is ***kaspa:qqynz0eqszjat65fw3d5tf8nl4eauy73khk34z65kj5rv7796mw2q8t44txf4***.
 
