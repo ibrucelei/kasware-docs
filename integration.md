@@ -125,14 +125,14 @@ try {
 ```javascript
 kasware.getBalance()
 ```
-Get BTC balance
+Get KAS balance
 #### Parameters
 none
 #### Returns
 - Promise - Object:
-  - confirmed - number : the confirmed satoshis
-  - unconfirmed - number : the unconfirmed satoshis
-  - total - number : the total satoshis
+  - confirmed - number : the confirmed sompi
+  - unconfirmed - number : the unconfirmed sompi
+  - total - number : the total sompi
 #### Example
 ```javascript
 try {
@@ -150,12 +150,12 @@ try {
 ```
 ### sendKaspa
 ```javascript
-kasware.sendKaspa(toAddress, satoshis, options)
+kasware.sendKaspa(toAddress, sompi, options)
 ```
-Send BTC
+Send KAS
 #### Parameters
 - toAddress - string: the address to send
-- satoshis - number: the satoshis to send
+- sompi - number: the sompi to send
 - options - object:  (optional)
   - feeRate - number: the network fee rate
 #### Returns
@@ -234,6 +234,59 @@ try {
   console.log(e);
 }
 ```
+
+### signKRC20Transaction
+
+```javascript
+kasware.signKRC20Transaction(inscribeJsonString, type, destAddr)
+```
+Sign KRC20 Transaction
+#### Parameters
+- inscribeJsonString - string: stringified json object
+- type - number: 2 for deployment, 3 for mint, 4 for transfer
+- destAddr - string: the address to transfer. it's an optional parameter. only used for transfer
+#### Returns
+- Promise - string: txid
+
+
+#### Example-1
+
+```javascript
+try {
+    const deployJsonString ='{"p":"KRC-20","op":"deploy","tick":"BBBB","max":"21000000000000000000000000000000","lim":"100000000000000000000", "pre":"100000000000000000000"}';
+  const type = 2
+  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString,type);
+  console.log(txid)
+} catch (e) {
+  console.log(e);
+}
+```
+
+#### Example-2
+```javascript
+try {
+  const inscribeJsonString = '{"p":"KRC-20","op":"mint","tick":"KSPR"}'
+  const type = 3
+  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString,type);
+  console.log(txid)
+} catch (e) {
+  console.log(e);
+}
+```
+
+#### Example-3
+```javascript
+try {
+  const transferJsonString = '{"p":"KRC-20","op":"transfer","tick":"RBMV","amt":"10000000000"}';
+  const type = 4
+  const destAddr = 'kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7'
+  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type, destAddr);
+  console.log(txid)
+} catch (e) {
+  console.log(e);
+}
+```
+
 ## Events
 ### accountsChanged
 ```javascript
