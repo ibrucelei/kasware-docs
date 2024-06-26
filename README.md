@@ -27,7 +27,7 @@ Please contact us at:
 - Discord **[https://discord.gg/qWS6YEDDPT](https://discord.gg/qWS6YEDDPT)**
 - Githbub **[https://github.com/kasware-wallet](https://github.com/kasware-wallet)**
 ## Donation
-Our receive address is ***kaspa:qqynz0eqszjat65fw3d5tf8nl4eauy73khk34z65kj5rv7796mw2q8t44txf4***.
+Our receive address is ***kaspa:qz8e8uheecv2a5t52whql56z9zhnpv9zdl3kd92daaexj4uvkkl8uhnm395wk***.
 
 Thanks for your support!
 
