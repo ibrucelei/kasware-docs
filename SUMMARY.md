@@ -6,8 +6,7 @@
 * [Private policy](private-policy.md)
 * [Legal disClaimer](legal-disclaimer.md)
 
-# 📖 KNOWLEDGE BASE
+## 📖 KNOWLEDGE BASE
 
-* 📖 KNOWLEDGE BASE
-    * [Set your own RPC](knowledge-base/set-your-own-rpc.md)
-    * [Wallet compatiblity](knowledge-base/wallet-compatibility.md)
+* [Wallet compatiblity](knowledge-base/wallet-compatibility.md)
+* [Set your own RPC](knowledge-base/set-your-own-rpc.md)
