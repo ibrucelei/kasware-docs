@@ -9,7 +9,7 @@ Go to [https://github.com/kaspanet/rusty-kaspa/releases](https://github.com/kasp
 
 Download the corresponding binary installation file according to your operating system.
 
-<img src="../images/download.png">
+<img src="../images/download.png" width="500">
 
 # Run rusty-kaspa node
 
@@ -46,12 +46,12 @@ The Data synchronization takes about 30 minutes, and when you see following mess
 
 Note: Do not close the console window.
 
-<img src="../images/sync-complete.png">
+<img src="../images/sync-complete.png" width="500">
 
 # Config kasware rpc
 
 Follow the steps shown to configure rpc.
 
-<img src="../images/wallet-rpc-setting-1.png" width="300">
-<img src="../images/wallet-rpc-setting-2.png" width="300">
-<img src="../images/wallet-rpc-setting-3.png" width="300">
+<img src="../images/wallet-rpc-setting-1.png" width="250">
+<img src="../images/wallet-rpc-setting-2.png" width="250">
+<img src="../images/wallet-rpc-setting-3.png" width="250">

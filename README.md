@@ -21,11 +21,15 @@ The Core Golang cli wallet and Kaspium uses m/44'/111111'/0' (with 24 word seed 
 For KasWare Wallet users, we strongly suggest choosing 111111 coin type, which is the default coin type when creating a new wallet with KasWare Wallet.
 
 **IMPORTANT** : KDX wallets are not BIP-32 compatible, so KDX derivation path is supported but is considered deprecated.
-## Contact
-Please contact us at:
+
+## Official Links
+
 - Telegram **[https://t.me/+eBTwLzz_BcwwMmE1](https://t.me/+eBTwLzz_BcwwMmE1)**
 - Discord **[https://discord.gg/qWS6YEDDPT](https://discord.gg/qWS6YEDDPT)**
 - Githbub **[https://github.com/kasware-wallet](https://github.com/kasware-wallet)**
+- **[https://www.kasware.io](https://www.kasware.io)**
+- **[https://www.kasware.xyz](https://www.kasware.xyz)**
+
 ## Donation
 Our receive address is ***kaspa:qz8e8uheecv2a5t52whql56z9zhnpv9zdl3kd92daaexj4uvkkl8uhnm395wk***.
 
