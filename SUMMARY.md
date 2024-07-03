@@ -8,6 +8,6 @@
 
 # 📖 KNOWLEDGE BASE
 
-* 📖 KNOWLEDGE BASE
+* [📖 KNOWLEDGE BASE](knowledge-base/)
     * [Set your own RPC](knowledge-base/set-your-own-rpc.md)
     * [Wallet compatiblity](knowledge-base/wallet-compatibility.md)
