@@ -4,7 +4,7 @@
 * 8GB RAM
 * 30GB free disk space
 
-# Download bianary
+# Download the installation package
 Go to [https://github.com/kaspanet/rusty-kaspa/releases](https://github.com/kaspanet/rusty-kaspa/releases)
 
 Download the corresponding binary installation file according to your operating system.

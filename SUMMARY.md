@@ -8,5 +8,6 @@
 
 # 📖 KNOWLEDGE BASE
 
-* [Set your own RPC](knowledge-base/set-your-own-rpc.md)
-* [Wallet compatiblity](knowledge-base/wallet-compatibility.md)
+* 📖 KNOWLEDGE BASE
+    * [Set your own RPC](knowledge-base/set-your-own-rpc.md)
+    * [Wallet compatiblity](knowledge-base/wallet-compatibility.md)
