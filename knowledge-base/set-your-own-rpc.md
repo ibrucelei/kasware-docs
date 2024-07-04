@@ -42,7 +42,7 @@ Re-execute the following command on the console.
 
 # Data synchronization
 
-The Data synchronization takes about 30 minutes, and when you see following messages, the synchronization is complete.
+Data synchronization takes approximately half an hour to one and a half hours, depending on your network and computer configuration. And when you see following messages, the synchronization is complete.
 
 Note: Do not close the console window.
 
@@ -50,7 +50,7 @@ Note: Do not close the console window.
 
 # Config kasware rpc
 
-Follow the steps shown to configure rpc.
+Follow the steps shown to configure rpc to ws://127.0.0.1:17110.
 
 <img src="../images/wallet-rpc-setting-1.png" width="250">
 <img src="../images/wallet-rpc-setting-2.png" width="250">
