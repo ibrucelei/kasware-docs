@@ -15,6 +15,8 @@ Download the corresponding binary installation file according to your operating 
 
 Unzip the binary file, and enter the unzipped directory. Execute the following command on the console to start the node and keep the console window open to wait for the data synchronization to complete.
 
+Note: For more command options, run kaspad --help. In particular, when --rpclisten-borsh=public, the rpc can be used by other devices. 
+
 ## windows
 
 ```powershell
