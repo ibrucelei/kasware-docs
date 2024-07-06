@@ -14,28 +14,27 @@ Download the latest corresponding binary installation file according to your ope
 
 ## Run kaspa-ng
 
-### Windows
+- Windows
 
-Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng.exe file to start the node.
+    Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng.exe file to start the node.
 
-### Macos-arm64
+- Macos-arm64
 
-Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng file to start the node.
+    Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng file to start the node.
 
-<img src="../images/mac-sec-kng-1-en.png" width="45%">
-<img src="../images/mac-sec-kng-2-en.png" width="45%">
+    <img src="../images/mac-sec-kng-1-en.png" width="45%">
+    <img src="../images/mac-sec-kng-2-en.png" width="45%">
 
-Re-double-click the kaspa-ng file to start the node.
+    Re-double-click the kaspa-ng file to start the node.
 
-<img src="../images/mac-sec-kng-3-en.png">
+    <img src="../images/mac-sec-kng-3-en.png">
 
-### Linux distributions that support the deb application format
+- Linux distributions that support the deb application format
 
-```bash
-sudo dpkg -i ./kaspa-ng_0.2.6-pre-rc1_amd64.deb
-
-kaspa-ng
-```
+    ```bash
+    sudo dpkg -i ./kaspa-ng_0.2.6-pre-rc1_amd64.deb
+    kaspa-ng
+    ```
 
 ## Graphic operation
 
@@ -45,7 +44,11 @@ kaspa-ng
 
 ## Data synchronization
 
-Please wait for data synchronization to finish. The process is complete when the following message appears.
+Please wait for data synchronization to finish. During this process, you can see the detailed synchronization process through the logs tab. If you look carefully, you can see the wrpc port we will use next.
+
+<img src="../images/kng-logs.png">
+
+The process is complete when the status bar at the bottom becomes as shown below.
 
 <img src="../images/kng-4.png">
 
@@ -64,30 +67,30 @@ Unzip the binary file, and enter the unzipped directory. Execute the following c
 
 Note: For more command options, run kaspad --help. In particular, when --rpclisten-borsh=public, the rpc can be used by other devices. 
 
-### Windows
+- Windows
 
-```powershell
-.\kaspad.exe --utxoindex --rpclisten-borsh=default --disable-upnp
-```
-### Macos-arm64
+    ```powershell
+    .\kaspad.exe --utxoindex --rpclisten-borsh=default --disable-upnp
+    ```
+- Macos-arm64
 
-```bash
-./kaspad --utxoindex --rpclisten-borsh=default --disable-upnp
-```
-The first time you run it, you need to make some security-related settings as shown below.
+    ```bash
+    ./kaspad --utxoindex --rpclisten-borsh=default --disable-upnp
+    ```
+    The first time you run it, you need to make some security-related settings as shown below.
 
-<img src="../images/mac-sec-rusty-1-en.png" width="45%">
-<img src="../images/mac-sec-rusty-2-en.png" width="45%">
+    <img src="../images/mac-sec-rusty-1-en.png" width="45%">
+    <img src="../images/mac-sec-rusty-2-en.png" width="45%">
 
-Re-execute the following command on the console.
+    Re-execute the following command on the console.
 
-<img src="../images/mac-sec-rusty-3-en.png">
+    <img src="../images/mac-sec-rusty-3-en.png">
 
-### Linux
+- Linux
 
-```bash
-./kaspad --utxoindex --rpclisten-borsh=default --disable-upnp
-```
+    ```bash
+    ./kaspad --utxoindex --rpclisten-borsh=default --disable-upnp
+    ```
 
 ## Data synchronization
 

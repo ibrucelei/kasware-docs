@@ -1,10 +1,15 @@
 # Integration with KasWare Wallet
+
 Welcome to KasWare's integration documentation. This documentation is for learning to integrate KasWare wallet with your applications.
   
-**Please note** : The integration API may be modified if relevant standards are officially released by kaspa core team one day in the future .
+**Please note** : The integration API may be modified if relevant standards are officially released by kaspa core team one day in the future.
+
 ## Getting Started
+
 First of all, install KasWare Wallet on your development machine. Once KasWare Wallet is installed and running, you should find that new browser tabs have a window.kasware object available in the developer console. This is how your website will interact with KasWare Wallet.
+
 ### Browser Detection
+
 To verify if the browser is running KasWare Wallet, copy and paste the code snippet below in the developer console of your web browser:
 ```javascript
 if (typeof window.kasware !== 'undefined') {
@@ -12,7 +17,9 @@ if (typeof window.kasware !== 'undefined') {
 }
 ```
 You can review the full API for the window.kasware object here.
+
 ### Connecting to KasWare Wallet
+
 "Connecting" or "logging in" to KasWare Wallet effectively means "to access the user's Kaspa account(s)".
 
 You should **only** initiate a connection request in response to direct user action, such as clicking a button. You should **always** disable the "connect" button while the connection request is pending. You should **never** initiate a connection request on page load.
@@ -21,19 +28,24 @@ We recommend that you provide a button to allow the user to connect KasWare Wall
 ```javascript
 kasware.requestAccounts()
 ```
+
 ### Demo
 ​​
 ## Methods
+
 ### requestAccounts
+
 ```javascript
 kasware.requestAccounts()
 ```
 Connect the current account.
+
 #### Parameters
 none
 #### Returns
 - Promise returns string[] : Address of current account.
 #### Example
+
 ```javascript
 try {
   let accounts = await window.kasware.requestAccounts();
@@ -43,16 +55,20 @@ try {
 }
 > connect success ['kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq']
 ```
+
 ### getAccounts
+
 ```javascript
 kasware.getAccounts()
 ```
 Get address of current account
+
 #### Parameters
 none
 #### Returns
 - Promise - string: address of current account
 #### Example
+
 ```javascript
 try {
   let res = await window.kasware.getAccounts();
@@ -62,16 +78,20 @@ try {
 }
 > ["kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq"]
 ```
+
 ### getNetwork
+
 ```javascript
 kasware.getNetwork()
 ```
 get network
+
 #### Parameters
 none
 #### Returns
 - Promise - string: the network. livenet and testnet
 #### Example
+
 ```javascript
 try {
   let res = await window.kasware.getNetwork();
@@ -82,16 +102,20 @@ try {
 ​
 > 0
 ```
+
 ### switchNetwork
+
 ```javascript
 kasware.switchNetwork(network)
 ```
 switch network
+
 #### Parameters
 - network - string: the network. mainnet/testnet/devnet
 #### Returns
 none
 #### Example
+
 ```javascript
 try {
   let res = await window.kasware.switchNetwork("mainnet");
@@ -102,7 +126,9 @@ try {
 ​
 > 0
 ```
+
 ### getPublicKey
+
 ```javascript
 kasware.getPublicKey()
 ```
@@ -112,6 +138,7 @@ none
 #### Returns
 - Promise - string: publicKey
 #### Example
+
 ```javascript
 try {
   let res = await window.kasware.getPublicKey();
@@ -121,7 +148,9 @@ try {
 }
 > 03cbaedc26f03fd3ba02fc936f338e980c9e2172c5e23128877ed46827e935296f
 ```
+
 ### getBalance
+
 ```javascript
 kasware.getBalance()
 ```
@@ -134,6 +163,7 @@ none
   - unconfirmed - number : the unconfirmed sompi
   - total - number : the total sompi
 #### Example
+
 ```javascript
 try {
   let res = await window.kasware.getBalance();
@@ -148,7 +178,9 @@ try {
     "total":100000
   }
 ```
+
 ### sendKaspa
+
 ```javascript
 kasware.sendKaspa(toAddress, sompi, options)
 ```
@@ -161,6 +193,7 @@ Send KAS
 #### Returns
 - Promise - string: txid
 #### Example
+
 ```javascript
 try {
   let txid = await window.kasware.sendKaspa("kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq",1000);
@@ -169,7 +202,9 @@ try {
   console.log(e);
 }
 ```
+
 ### signMessage
+
 ```javascript
 kasware.signMessage(msg[, type])
 ```
@@ -180,6 +215,7 @@ sign message
 #### Returns
 - Promise - string: the signature.
 #### Example
+
 ```javascript
 // sign by ecdsa
 try {
@@ -224,6 +260,7 @@ Push Transaction
 #### Returns
 - Promise - string: txid
 #### Example
+
 ```javascript
 try {
   let txid = await window.kasware.pushTx({
@@ -248,12 +285,11 @@ Sign KRC20 Transaction
 #### Returns
 - Promise - string: txid
 
-
 #### Example-1
 
 ```javascript
 try {
-    const deployJsonString ='{"p":"KRC-20","op":"deploy","tick":"BBBB","max":"21000000000000000000000000000000","lim":"100000000000000000000", "pre":"100000000000000000000"}';
+  const deployJsonString ='{"p":"KRC-20","op":"deploy","tick":"BBBB","max":"21000000000000000000000000000000","lim":"100000000000000000000", "pre":"100000000000000000000"}';
   const type = 2
   let txid = await window.kasware.signKRC20Transaction(inscribeJsonString,type);
   console.log(txid)
@@ -263,6 +299,7 @@ try {
 ```
 
 #### Example-2
+
 ```javascript
 try {
   const inscribeJsonString = '{"p":"KRC-20","op":"mint","tick":"KSPR"}'
@@ -275,6 +312,7 @@ try {
 ```
 
 #### Example-3
+
 ```javascript
 try {
   const transferJsonString = '{"p":"KRC-20","op":"transfer","tick":"RBMV","amt":"10000000000"}';

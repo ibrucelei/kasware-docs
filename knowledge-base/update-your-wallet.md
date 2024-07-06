@@ -1,4 +1,5 @@
 # Update Your Wallet
+
 Usually, the extension will be auto-updated. If your extension didn't update to the latest version, then you may follow the steps below to update it.
 
 1. Click on the extension icon on the top right of your screen, then click "Manage extensions" menu.

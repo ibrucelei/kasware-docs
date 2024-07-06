@@ -2,7 +2,7 @@
 
 * [KasWare Wallet](README.md)
 * [Esteemed donor list](esteemed-donor-list.md)
-* [Private policy](private-policy.md)
+* [Private policy](privacy-policy.md)
 * [Legal disClaimer](legal-disclaimer.md)
 
 ## 📖 KNOWLEDGE BASE

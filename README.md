@@ -1,4 +1,5 @@
 # KasWare Wallet
+
 Welcome to KasWare's Documentation.
 
 KasWare is the first open source browser extension wallet for Kaspa in the world! Simple and reliable.
@@ -9,9 +10,13 @@ KasWare Wallet is a non-custodial wallet. We never have access to your funds. Ka
 - Your private keys are encrypted on your device by your password and are never shared with anyone.
 - KasWare Wallet doesn't track any personal identifiable information, your account addresses, or asset balances.
 - Users can import accounts from single private keys. These accounts are not derived from your Secret Recovery Phrase and will be labelled as “imported”.
+
 ## Quick Start
+
 Click the [Download](https://chrome.google.com/webstore/detail/hklhheigdmpoolooomdihmhlpjjdbklf) button, which will take you to the chrome store to download the extension. 
+
 ## Address Types
+
 972 and 111111 are coin types (they are different for historical reasons)
 
 KDX/Kaspanet Web Wallet uses m/44'/972/0' derivation path (with 12 word seed phrases)
@@ -31,7 +36,8 @@ For KasWare Wallet users, we strongly suggest choosing 111111 coin type, which i
 - **[https://www.kasware.xyz](https://www.kasware.xyz)**
 
 ## Donation
-Our receive address is ***kaspa:qz8e8uheecv2a5t52whql56z9zhnpv9zdl3kd92daaexj4uvkkl8uhnm395wk***.
+
+Our devfund address is ***kaspa:qz8e8uheecv2a5t52whql56z9zhnpv9zdl3kd92daaexj4uvkkl8uhnm395wk***.
 
 Thanks for your support!
 
