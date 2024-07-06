@@ -27,7 +27,7 @@ Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-
 
 Re-double-click the kaspa-ng file to start the node.
 
-<img src="../images/mac-sec-kng-2-en.png" width="500">
+<img src="../images/mac-sec-kng-3-en.png" width="500">
 
 ### Linux distributions that support the deb application format
 
