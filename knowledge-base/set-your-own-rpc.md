@@ -12,7 +12,7 @@ Download the latest corresponding binary installation file according to your ope
 
 <img src="../images/download-kng.bmp" width="500">
 
-## Run
+## Run kaspa-ng
 
 ### Windows
 
@@ -64,12 +64,12 @@ Unzip the binary file, and enter the unzipped directory. Execute the following c
 
 Note: For more command options, run kaspad --help. In particular, when --rpclisten-borsh=public, the rpc can be used by other devices. 
 
-### windows
+### Windows
 
 ```powershell
 .\kaspad.exe --utxoindex --rpclisten-borsh=default --disable-upnp
 ```
-### osx
+### Macos-arm64
 
 ```bash
 ./kaspad --utxoindex --rpclisten-borsh=default --disable-upnp
@@ -83,7 +83,7 @@ Re-execute the following command on the console.
 
 <img src="../images/mac-sec-rusty-3-en.png" width="400">
 
-### linux
+### Linux
 
 ```bash
 ./kaspad --utxoindex --rpclisten-borsh=default --disable-upnp
