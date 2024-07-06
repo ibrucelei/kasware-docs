@@ -10,7 +10,7 @@ Go to [https://github.com/aspectron/kaspa-ng/releases](https://github.com/aspect
 
 Download the latest corresponding binary installation file according to your operating system.
 
-<img src="../images/download-kng.bmp" width="500">
+<img src="../images/download-kng.bmp">
 
 ## Run kaspa-ng
 
@@ -22,12 +22,12 @@ Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-
 
 Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng file to start the node.
 
-<img src="../images/mac-sec-kng-1-en.png" width="400">
-<img src="../images/mac-sec-kng-2-en.png" width="500">
+<img src="../images/mac-sec-kng-1-en.png" width="45%">
+<img src="../images/mac-sec-kng-2-en.png" width="45%">
 
 Re-double-click the kaspa-ng file to start the node.
 
-<img src="../images/mac-sec-kng-3-en.png" width="500">
+<img src="../images/mac-sec-kng-3-en.png">
 
 ### Linux distributions that support the deb application format
 
@@ -39,15 +39,15 @@ kaspa-ng
 
 ## Graphic operation
 
-<img src="../images/kng-1.png" width="300">
-<img src="../images/kng-2.png" width="300">
-<img src="../images/kng-3.png" width="300">
+<img src="../images/kng-1.png" width="30%">
+<img src="../images/kng-2.png" width="30%">
+<img src="../images/kng-3.png" width="30%">
 
 ## Data synchronization
 
 Please wait for data synchronization to finish. The process is complete when the following message appears.
 
-<img src="../images/kng-4.png" width="300">
+<img src="../images/kng-4.png">
 
 # Command-line Mode
 
@@ -56,7 +56,7 @@ Go to [https://github.com/kaspanet/rusty-kaspa/releases](https://github.com/kasp
 
 Download the corresponding binary installation file according to your operating system.
 
-<img src="../images/download-rusty-kaspa.png" width="500">
+<img src="../images/download-rusty-kaspa.png">
 
 ## Run rusty-kaspa node
 
@@ -76,12 +76,12 @@ Note: For more command options, run kaspad --help. In particular, when --rpclist
 ```
 The first time you run it, you need to make some security-related settings as shown below.
 
-<img src="../images/mac-sec-rusty-1-en.png" width="400">
-<img src="../images/mac-sec-rusty-2-en.png" width="500">
+<img src="../images/mac-sec-rusty-1-en.png" width="45%">
+<img src="../images/mac-sec-rusty-2-en.png" width="45%">
 
 Re-execute the following command on the console.
 
-<img src="../images/mac-sec-rusty-3-en.png" width="400">
+<img src="../images/mac-sec-rusty-3-en.png">
 
 ### Linux
 
@@ -95,13 +95,13 @@ Data synchronization takes approximately half an hour to one and a half hours, d
 
 Note: Do not close the console window.
 
-<img src="../images/sync-complete.png" width="500">
+<img src="../images/sync-complete.png">
 
 # Config kasware rpc
 
-Follow the steps shown to configure rpc to ws://127.0.0.1:17110.
+Follow the steps below to configure rpc to ws://127.0.0.1:17110.
 
-<img src="../images/wallet-rpc-setting-1.png" width="250">
-<img src="../images/wallet-rpc-setting-2.png" width="250">
-<img src="../images/wallet-rpc-setting-3.png" width="250">
+<img src="../images/wallet-rpc-setting-1.png" width="30%">
+<img src="../images/wallet-rpc-setting-2.png" width="30%">
+<img src="../images/wallet-rpc-setting-3.png" width="30%">
 
