@@ -18,7 +18,7 @@ Download the latest corresponding binary installation file according to your ope
 
 Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng.exe file to start the node.
 
-### Macos
+### Macos-arm64
 
 Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng file to start the node.
 
@@ -69,7 +69,7 @@ Note: For more command options, run kaspad --help. In particular, when --rpclist
 ```powershell
 .\kaspad.exe --utxoindex --rpclisten-borsh=default --disable-upnp
 ```
-### macos
+### osx
 
 ```bash
 ./kaspad --utxoindex --rpclisten-borsh=default --disable-upnp
