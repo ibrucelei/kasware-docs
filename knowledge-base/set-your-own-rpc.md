@@ -44,7 +44,7 @@ Go to [https://github.com/kaspanet/rusty-kaspa/releases](https://github.com/kasp
 
 Download the corresponding binary installation file according to your operating system.
 
-<img src="../images/download.png" width="500">
+<img src="../images/download-rusty-kaspa.png" width="500">
 
 ## Run rusty-kaspa node
 
