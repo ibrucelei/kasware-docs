@@ -18,14 +18,6 @@ Download the latest corresponding binary installation file according to your ope
 
 Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng.exe file to start the node.
 
-<img src="../images/kng-1.png" width="300">
-<img src="../images/kng-2.png" width="300">
-<img src="../images/kng-3.png" width="300">
-
-Please wait for data synchronization to finish. The process is complete when the following message appears.
-
-<img src="../images/kng-4.png" width="300">
-
 ### Macos
 
 ### Linux distributions that support the deb application format
@@ -35,7 +27,18 @@ sudo dpkg -i ./kaspa-ng_0.2.6-pre-rc1_amd64.deb
 
 kaspa-ng
 ```
-Graphic operation part is the same as windows.
+
+## Graphic operation
+
+<img src="../images/kng-1.png" width="300">
+<img src="../images/kng-2.png" width="300">
+<img src="../images/kng-3.png" width="300">
+
+## Data synchronization
+
+Please wait for data synchronization to finish. The process is complete when the following message appears.
+
+<img src="../images/kng-4.png" width="300">
 
 # Command-line Mode
 
