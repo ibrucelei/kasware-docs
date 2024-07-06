@@ -20,6 +20,15 @@ Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-
 
 ### Macos
 
+Unzip the binary file, and enter the unzipped directory. Double-click the kaspa-ng file to start the node.
+
+<img src="../images/mac-sec-kng-1-en.png" width="400">
+<img src="../images/mac-sec-kng-2-en.png" width="500">
+
+Re-double-click the kaspa-ng file to start the node.
+
+<img src="../images/mac-sec-kng-2-en.png" width="500">
+
 ### Linux distributions that support the deb application format
 
 ```bash
@@ -67,12 +76,12 @@ Note: For more command options, run kaspad --help. In particular, when --rpclist
 ```
 The first time you run it, you need to make some security-related settings as shown below.
 
-<img src="../images/macos-security-1-en.png" width="400">
-<img src="../images/macos-security-2-en.png" width="500">
+<img src="../images/mac-sec-rusty-1-en.png" width="400">
+<img src="../images/mac-sec-rusty-2-en.png" width="500">
 
 Re-execute the following command on the console.
 
-<img src="../images/macos-security-3-en.png" width="400">
+<img src="../images/mac-sec-rusty-3-en.png" width="400">
 
 ### linux
 
