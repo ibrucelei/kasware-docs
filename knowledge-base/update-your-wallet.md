@@ -6,7 +6,7 @@ Usually, the extension will be auto-updated. If your extension didn't update to 
 
 <img src="../images/local-version.png">
 
-2. Visit https://chromewebstore.google.com/detail/hklhheigdmpoolooomdihmhlpjjdbklf to confirm the latest version. If you are using the latest version, you can skip the next step.
+2. Visit [KasWare Wallet extension on Chrome Webstore](https://chromewebstore.google.com/detail/hklhheigdmpoolooomdihmhlpjjdbklf) to confirm the latest version. If you are using the latest version, you can skip the next step.
 
 <img src="../images/latest-version.png">
 
