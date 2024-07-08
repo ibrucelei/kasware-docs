@@ -29,15 +29,15 @@ For KasWare Wallet users, we strongly suggest choosing 111111 coin type, which i
 
 ## Official Links
 
-- Telegram **[https://t.me/+eBTwLzz_BcwwMmE1](https://t.me/+eBTwLzz_BcwwMmE1)**
+- Website **[https://www.kasware.xyz](https://www.kasware.xyz)**
+- Telegram **[https://t.me/kasware_wallet](https://t.me/kasware_wallet)**
 - Discord **[https://discord.gg/qWS6YEDDPT](https://discord.gg/qWS6YEDDPT)**
 - Githbub **[https://github.com/kasware-wallet](https://github.com/kasware-wallet)**
-- **[https://www.kasware.io](https://www.kasware.io)**
-- **[https://www.kasware.xyz](https://www.kasware.xyz)**
+- Chrome Webstore **[https://chrome.google.com/webstore/detail/hklhheigdmpoolooomdihmhlpjjdbklf](https://chrome.google.com/webstore/detail/hklhheigdmpoolooomdihmhlpjjdbklf)**
 
 ## Donation
 
-Our devfund address is ***kaspa:qz8e8uheecv2a5t52whql56z9zhnpv9zdl3kd92daaexj4uvkkl8uhnm395wk***.
+Our devfund address is ***kaspa:qz8e8uheecv2a5t52whql56z9zhnpv9zdl3kd92daaexj4uvkkl8uhnm395wk***
 
 Thanks for your support!
 
