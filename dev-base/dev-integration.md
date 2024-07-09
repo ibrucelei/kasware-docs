@@ -127,6 +127,30 @@ try {
 > 0
 ```
 
+### disconnect
+
+```javascript
+kasware.disconnect(origin)
+```
+disconnect kasware wallet
+
+#### Parameters
+- origin - string: website origin url
+#### Returns
+none
+#### Example
+
+```javascript
+try {
+  let origin = window.location.origin;
+  await kasware.disconnect(origin);
+} catch (e) {
+  console.log(e);
+}
+​
+> 0
+```
+
 ### getPublicKey
 
 ```javascript
