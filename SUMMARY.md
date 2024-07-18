@@ -9,6 +9,7 @@
 * [Wallet compatiblity](knowledge-base/wallet-compatibility.md)
 * [Set your own RPC](knowledge-base/set-your-own-rpc.md)
 * [Update your wallet](knowledge-base/update-your-wallet.md)
+* [Retrieve incomplete KRC20 fund](knowledge-base/retrieve-incomplete-KRC20-fund.md)
 
 ## 📖 DEV BASE
 * [Dev integration](dev-base/dev-integration.md)
