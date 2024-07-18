@@ -1,5 +1,3 @@
-# Retrieve Incomplete KRC20 Fund
-
 This is little tool is to help users retreive funds stuck in incomplete KRC20 transactions.
 
 ## Background
@@ -19,26 +17,24 @@ However, parameters of transfer/deploy are a little complicated. users have to r
 
 1. go to the setting tab. and click "Apps" option.
 
-![Apps](../images/wallet-settings-apps.png)
+![](../images/wallet-settings-apps.png)
 
-1. Click “Retrieve Incomplete KRC20 UTXOs” tool.
+2. Click "Retrieve Incomplete KRC20 UTXOs" tool.
 
-![Apps-riku](../images/apps-rik20u.png)
+![](../images/apps-rik20u.png)
 
-1. Click “Search Incomplete KRC20 UTXOs” button. It will automaticlly search all availabe KRC20 tickers to find if your address contains any incomplete UTXOs.
-    
-    you can also input ticker name, or deployment/transfer details you once done before. It will help find incomplete UTXOs.
-    
+3. Click "Search Incomplete KRC20 UTXOs" button. It will automaticlly search all availabe KRC20 tickers to find if your address contains any incomplete UTXOs.
+    > you can also input ticker name, or deployment/transfer details you once done before. It will help find incomplete UTXOs.
 
-![Untitled](../images/apps-rik20u-mint-1.png)
+![](../images/apps-rik20u-mint-1.png)
 
-1. All availabe UTXOs will be displayed below. Click “Retrieve”
+4. All availabe UTXOs will be displayed below. Click "Retrieve"
 
-![Untitled](../images/apps-rik20u-mint-2.png)
+![](../images/apps-rik20u-mint-2.png)
 
-1. KAS is retrieved to your address.
+5. KAS is retrieved to your address.
 
-![Untitled](../images/apps-rik20u-mint-3.png)
+![](../images/apps-rik20u-mint-3.png)
 
 Hope it could help you.
 
