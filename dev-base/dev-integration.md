@@ -213,7 +213,7 @@ Send KAS
 - toAddress - string: the address to send
 - sompi - number: the sompi to send
 - options - object:  (optional)
-  - feeRate - number: the network fee rate
+  - priorityFee - number: the network prioity fee. default is 0. Unit is sompi
 #### Returns
 - Promise - string: txid
 #### Example
