@@ -15,7 +15,7 @@ However, parameters of transfer/deploy are a little complicated. users have to r
 
 ## Tutorial
 
-1. go to the setting tab. and click "Apps" option.
+1. go to the setting tab. and click "Add-ons" option.
 
 ![](../images/wallet-settings-apps.png)
 
