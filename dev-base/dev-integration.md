@@ -299,13 +299,14 @@ try {
 ### signKRC20Transaction
 
 ```javascript
-kasware.signKRC20Transaction(inscribeJsonString, type, destAddr)
+kasware.signKRC20Transaction(inscribeJsonString, type, destAddr, priorityFee)
 ```
 Sign KRC20 Transaction
 #### Parameters
 - inscribeJsonString - string: stringified json object
 - type - number: 2 for deployment, 3 for mint, 4 for transfer
-- destAddr - string: the address to transfer. it's an optional parameter. only used for transfer
+- destAddr - string:(optional) the address to transfer. it's an optional parameter. only used for transfer
+- priorityFee - number:(optional) the network prioity fee. default is 0. Unit is kas.
 #### Returns
 - Promise - string: txid
 
