@@ -340,7 +340,7 @@ try {
 
 ```javascript
 try {
-  const transferJsonString = '{"p":"KRC-20","op":"transfer","tick":"RBMV","amt":"10000000000"}';
+  const transferJsonString = '{"p":"KRC-20","op":"transfer","tick":"RBMV","amt":"10000000000","to":"kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7"}';
   const type = 4
   const destAddr = 'kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7'
   let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type, destAddr);
