@@ -11,6 +11,8 @@
 * [Update your wallet](knowledge-base/update-your-wallet.md)
 * [Retrieve incomplete KRC20 fund](knowledge-base/retrieve-incomplete-KRC20-fund.md)
 
-## 📖 DEV BASE
-* [Dev integration](dev-base/dev-integration.md)
+## ❓ FAQ
+* [Address & balance issues](faq/address-balance-issues.md)
 
+## 🛠️ DEV BASE
+* [Dev integration](dev-base/dev-integration.md)
