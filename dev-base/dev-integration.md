@@ -1,7 +1,6 @@
 # Integration with KasWare Wallet
 
 Welcome to KasWare's integration documentation. This documentation is for learning to integrate KasWare wallet with your applications.
-  
 **Please note** : The integration API may be modified if relevant standards are officially released by kaspa core team one day in the future.
 
 ## Getting Started
@@ -11,11 +10,13 @@ First of all, install KasWare Wallet on your development machine. Once KasWare W
 ### Browser Detection
 
 To verify if the browser is running KasWare Wallet, copy and paste the code snippet below in the developer console of your web browser:
+
 ```javascript
-if (typeof window.kasware !== 'undefined') {
-  console.log('KasWare Wallet is installed!');
+if (typeof window.kasware !== "undefined") {
+  console.log("KasWare Wallet is installed!");
 }
 ```
+
 You can review the full API for the window.kasware object here.
 
 ### Connecting to KasWare Wallet
@@ -25,25 +26,34 @@ You can review the full API for the window.kasware object here.
 You should **only** initiate a connection request in response to direct user action, such as clicking a button. You should **always** disable the "connect" button while the connection request is pending. You should **never** initiate a connection request on page load.
 
 We recommend that you provide a button to allow the user to connect KasWare Wallet to your dapp. Clicking this button should call the following method:
+
 ```javascript
-kasware.requestAccounts()
+kasware.requestAccounts();
 ```
 
 ### Demo
+
+<u>[Demo source code](https://github.com/kasware-wallet/dapp-demo)</u>
 ​​
+
 ## Methods
 
 ### requestAccounts
 
 ```javascript
-kasware.requestAccounts()
+kasware.requestAccounts();
 ```
+
 Connect the current account.
 
 #### Parameters
+
 none
+
 #### Returns
+
 - Promise returns string[] : Address of current account.
+
 #### Example
 
 ```javascript
@@ -59,14 +69,19 @@ try {
 ### getAccounts
 
 ```javascript
-kasware.getAccounts()
+kasware.getAccounts();
 ```
+
 Get address of current account
 
 #### Parameters
+
 none
+
 #### Returns
+
 - Promise - string: address of current account
+
 #### Example
 
 ```javascript
@@ -82,14 +97,19 @@ try {
 ### getNetwork
 
 ```javascript
-kasware.getNetwork()
+kasware.getNetwork();
 ```
+
 get network
 
 #### Parameters
+
 none
+
 #### Returns
+
 - Promise - string: the network. livenet and testnet
+
 #### Example
 
 ```javascript
@@ -106,14 +126,19 @@ try {
 ### switchNetwork
 
 ```javascript
-kasware.switchNetwork(network)
+kasware.switchNetwork(network);
 ```
+
 switch network
 
 #### Parameters
+
 - network - string: the network. mainnet/testnet/devnet
+
 #### Returns
+
 none
+
 #### Example
 
 ```javascript
@@ -130,14 +155,19 @@ try {
 ### disconnect
 
 ```javascript
-kasware.disconnect(origin)
+kasware.disconnect(origin);
 ```
+
 disconnect kasware wallet
 
 #### Parameters
+
 - origin - string: website origin url
+
 #### Returns
+
 none
+
 #### Example
 
 ```javascript
@@ -154,13 +184,19 @@ try {
 ### getPublicKey
 
 ```javascript
-kasware.getPublicKey()
+kasware.getPublicKey();
 ```
+
 Get publicKey of current account.
+
 #### Parameters
+
 none
+
 #### Returns
+
 - Promise - string: publicKey
+
 #### Example
 
 ```javascript
@@ -176,16 +212,22 @@ try {
 ### getBalance
 
 ```javascript
-kasware.getBalance()
+kasware.getBalance();
 ```
+
 Get KAS balance
+
 #### Parameters
+
 none
+
 #### Returns
+
 - Promise - Object:
   - confirmed - number : the confirmed sompi
   - unconfirmed - number : the unconfirmed sompi
   - total - number : the total sompi
+
 #### Example
 
 ```javascript
@@ -206,22 +248,31 @@ try {
 ### sendKaspa
 
 ```javascript
-kasware.sendKaspa(toAddress, sompi, options)
+kasware.sendKaspa(toAddress, sompi, options);
 ```
+
 Send KAS
+
 #### Parameters
+
 - toAddress - string: the address to send
 - sompi - number: the sompi to send
-- options - object:  (optional)
+- options - object: (optional)
   - priorityFee - number: the network prioity fee. default is 0. Unit is sompi
+
 #### Returns
+
 - Promise - string: txid
+
 #### Example
 
 ```javascript
 try {
-  let txid = await window.kasware.sendKaspa("kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq",1000);
-  console.log(txid)
+  let txid = await window.kasware.sendKaspa(
+    "kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq",
+    1000
+  );
+  console.log(txid);
 } catch (e) {
   console.log(e);
 }
@@ -232,12 +283,18 @@ try {
 ```javascript
 kasware.signMessage(msg[, type])
 ```
+
 sign message
+
 #### Parameters
+
 - msg - string: a string to sign
-- type - string:  (Optional) "ecdsa" | "bip322-simple". default is "ecdsa"
+- type - string: (Optional) "ecdsa" | "bip322-simple". default is "ecdsa"
+
 #### Returns
+
 - Promise - string: the signature.
+
 #### Example
 
 ```javascript
@@ -275,22 +332,28 @@ try {
 ### pushTx
 
 ```javascript
-kasware.pushTx(options)
+kasware.pushTx(options);
 ```
+
 Push Transaction
+
 #### Parameters
+
 - options - Object:
 - rawtx - string: rawtx to push
+
 #### Returns
+
 - Promise - string: txid
+
 #### Example
 
 ```javascript
 try {
   let txid = await window.kasware.pushTx({
-    rawtx:"0200000000010135bd7d..."
+    rawtx: "0200000000010135bd7d...",
   });
-  console.log(txid)
+  console.log(txid);
 } catch (e) {
   console.log(e);
 }
@@ -299,25 +362,31 @@ try {
 ### signKRC20Transaction
 
 ```javascript
-kasware.signKRC20Transaction(inscribeJsonString, type, destAddr, priorityFee)
+kasware.signKRC20Transaction(inscribeJsonString, type, destAddr, priorityFee);
 ```
+
 Sign KRC20 Transaction
+
 #### Parameters
+
 - inscribeJsonString - string: stringified json object
 - type - number: 2 for deployment, 3 for mint, 4 for transfer
 - destAddr - string:(optional) the address to transfer. it's an optional parameter. only used for transfer
 - priorityFee - number:(optional) the network prioity fee. default is 0. Unit is kas.
+
 #### Returns
+
 - Promise - string: txid
 
 #### Example-1
 
 ```javascript
 try {
-  const deployJsonString ='{"p":"KRC-20","op":"deploy","tick":"BBBB","max":"21000000000000000000000000000000","lim":"100000000000000000000", "pre":"100000000000000000000"}';
-  const type = 2
-  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString,type);
-  console.log(txid)
+  const deployJsonString =
+    '{"p":"KRC-20","op":"deploy","tick":"BBBB","max":"21000000000000000000000000000000","lim":"100000000000000000000", "pre":"100000000000000000000"}';
+  const type = 2;
+  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type);
+  console.log(txid);
 } catch (e) {
   console.log(e);
 }
@@ -327,10 +396,10 @@ try {
 
 ```javascript
 try {
-  const inscribeJsonString = '{"p":"KRC-20","op":"mint","tick":"KSPR"}'
-  const type = 3
-  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString,type);
-  console.log(txid)
+  const inscribeJsonString = '{"p":"KRC-20","op":"mint","tick":"KSPR"}';
+  const type = 3;
+  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type);
+  console.log(txid);
 } catch (e) {
   console.log(e);
 }
@@ -340,26 +409,33 @@ try {
 
 ```javascript
 try {
-  const transferJsonString = '{"p":"KRC-20","op":"transfer","tick":"RBMV","amt":"10000000000","to":"kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7"}';
-  const type = 4
-  const destAddr = 'kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7'
+  const transferJsonString =
+    '{"p":"KRC-20","op":"transfer","tick":"RBMV","amt":"10000000000","to":"kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7"}';
+  const type = 4;
+  const destAddr = "kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7";
   let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type, destAddr);
-  console.log(txid)
+  console.log(txid);
 } catch (e) {
   console.log(e);
 }
 ```
 
 ## Events
+
 ### accountsChanged
+
 ```javascript
 kasware.on('accountsChanged', handler: (accounts: Array<string>) => void);
 kasware.removeListener('accountsChanged', handler: (accounts: Array<string>) => void);
 ```
+
 The accountsChanged will be emitted whenever the user's exposed account address changes.
+
 ### networkChanged
+
 ```javascript
 kasware.on('networkChanged', handler: (network: string) => void);
 kasware.removeListener('networkChanged', handler: (network: string) => void);
 ```
+
 The networkChanged will be emitted whenever the user's network changes.
