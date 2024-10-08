@@ -13,6 +13,7 @@
 
 ## ❓ FAQ
 * [Address & balance issues](faq/address-balance-issues.md)
+* [Export/Import Seedphrase & Privatekey](faq/export-import-seedphrase-and-privatekey.md)
 
 ## 🛠️ DEV BASE
 * [Dev integration](dev-base/dev-integration.md)
