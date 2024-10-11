@@ -245,6 +245,46 @@ try {
   }
 ```
 
+### getBalance
+
+```javascript
+kasware.getKRC20Balance();
+```
+
+Get KRC20 token balance
+
+#### Parameters
+
+none
+
+#### Returns
+
+- Promise - Array of Object:
+  - balance: string;
+  - dec: string;
+  - locked: string;
+  - opScoreMod: string;
+  - tick: string;
+
+#### Example
+
+```javascript
+try {
+  let res = await window.kasware.getKRC20Balance();
+  console.log(res)
+} catch (e) {
+  console.log(e);
+}
+​
+> {
+    balance: "287999890000000"
+    dec: "8"
+    locked: "0"
+    opScoreMod: "905940300025"
+    tick: "XXXX"
+  }
+```
+
 ### sendKaspa
 
 ```javascript
@@ -308,12 +348,11 @@ try {
 ​
 > G+LrYa7T5dUMDgQduAErw+i6ebK4GqTXYVWIDM+snYk7Yc6LdPitmaqM6j+iJOeID1CsMXOJFpVopvPiHBdulkE=
 ​
-// verify by ecdsa
-import { verifyMessage } from "@kasware/wallet-utils";
+
 const pubkey = "026887958bcc4cb6f8c04ea49260f0d10e312c41baf485252953b14724db552aac";
 const message = "abcdefghijk123456789";
 const signature = "G+LrYa7T5dUMDgQduAErw+i6ebK4GqTXYVWIDM+snYk7Yc6LdPitmaqM6j+iJOeID1CsMXOJFpVopvPiHBdulkE=";
-const result = verifyMessage(pubkey,message,signature);
+const result = kasware.verifyMessage(pubkey,message,signature);
 console.log(result);
 ​
 > true
