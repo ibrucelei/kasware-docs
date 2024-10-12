@@ -245,7 +245,7 @@ try {
   }
 ```
 
-### getBalance
+### getKRC20Balance
 
 ```javascript
 kasware.getKRC20Balance();
