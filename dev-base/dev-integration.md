@@ -12,8 +12,8 @@ First of all, install KasWare Wallet on your development machine. Once KasWare W
 To verify if the browser is running KasWare Wallet, copy and paste the code snippet below in the developer console of your web browser:
 
 ```javascript
-if (typeof window.kasware !== "undefined") {
-  console.log("KasWare Wallet is installed!");
+if (typeof window.kasware !== 'undefined') {
+  console.log('KasWare Wallet is installed!');
 }
 ```
 
@@ -269,7 +269,7 @@ Send KAS
 ```javascript
 try {
   let txid = await window.kasware.sendKaspa(
-    "kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq",
+    'kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq',
     1000
   );
   console.log(txid);
@@ -329,36 +329,6 @@ try {
 > AkcwRAIgeHUcjr0jODaR7GMM8cenWnIj0MYdGmmrpGyMoryNSkgCICzVXWrLIKKp5cFtaCTErY7FGNXTFe6kuEofl4G+Vi5wASECaIeVi8xMtvjATqSSYPDRDjEsQbr0hSUpU7FHJNtVKqw=
 ```
 
-### pushTx
-
-```javascript
-kasware.pushTx(options);
-```
-
-Push Transaction
-
-#### Parameters
-
-- options - Object:
-- rawtx - string: rawtx to push
-
-#### Returns
-
-- Promise - string: txid
-
-#### Example
-
-```javascript
-try {
-  let txid = await window.kasware.pushTx({
-    rawtx: "0200000000010135bd7d...",
-  });
-  console.log(txid);
-} catch (e) {
-  console.log(e);
-}
-```
-
 ### signKRC20Transaction
 
 ```javascript
@@ -385,7 +355,10 @@ try {
   const deployJsonString =
     '{"p":"KRC-20","op":"deploy","tick":"BBBB","max":"21000000000000000000000000000000","lim":"100000000000000000000", "pre":"100000000000000000000"}';
   const type = 2;
-  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type);
+  let txid = await window.kasware.signKRC20Transaction(
+    inscribeJsonString,
+    type
+  );
   console.log(txid);
 } catch (e) {
   console.log(e);
@@ -398,7 +371,10 @@ try {
 try {
   const inscribeJsonString = '{"p":"KRC-20","op":"mint","tick":"KSPR"}';
   const type = 3;
-  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type);
+  let txid = await window.kasware.signKRC20Transaction(
+    inscribeJsonString,
+    type
+  );
   console.log(txid);
 } catch (e) {
   console.log(e);
@@ -412,8 +388,12 @@ try {
   const transferJsonString =
     '{"p":"KRC-20","op":"transfer","tick":"RBMV","amt":"10000000000","to":"kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7"}';
   const type = 4;
-  const destAddr = "kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7";
-  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type, destAddr);
+  const destAddr = 'kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7';
+  let txid = await window.kasware.signKRC20Transaction(
+    inscribeJsonString,
+    type,
+    destAddr
+  );
   console.log(txid);
 } catch (e) {
   console.log(e);
