@@ -94,6 +94,35 @@ try {
 > ["kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq"]
 ```
 
+### getVersion
+
+```javascript
+kasware.getVersion();
+```
+
+get wallet version
+
+#### Parameters
+
+none
+
+#### Returns
+
+- Promise - string: wallet version
+
+#### Example
+
+```javascript
+try {
+  let res = await window.kasware.getVersion();
+  console.log(res)
+} catch (e) {
+  console.log(e);
+}
+​
+> '0.7.5.4'
+```
+
 ### getNetwork
 
 ```javascript
