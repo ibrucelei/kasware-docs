@@ -416,7 +416,7 @@ Sign KRC20 Transaction
 
 - Promise - string: txid
 
-#### Example-1
+#### Example-1: deploy a KRC20 token
 
 ```javascript
 try {
@@ -433,11 +433,11 @@ try {
 }
 ```
 
-#### Example-2
+#### Example-2: mint a KRC20 token
 
 ```javascript
 try {
-  const inscribeJsonString = '{"p":"KRC-20","op":"mint","tick":"KSPR"}';
+  const inscribeJsonString = '{"p":"KRC-20","op":"mint","tick":"XXXX"}';
   const type = 3;
   let txid = await window.kasware.signKRC20Transaction(
     inscribeJsonString,
@@ -449,7 +449,7 @@ try {
 }
 ```
 
-#### Example-3
+#### Example-3: transfer a KRC20 token
 
 ```javascript
 try {
