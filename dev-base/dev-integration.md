@@ -487,3 +487,31 @@ kasware.removeListener('networkChanged', handler: (network: string) => void);
 ```
 
 The networkChanged will be emitted whenever the user's network changes.
+
+### balanceChanged
+
+```javascript
+kasware.on('balanceChanged', handler: (balance: IBalance) => void);
+kasware.removeListener('balanceChanged', handler: (balance: IBalance) => void);;
+```
+
+The balaneChanged will be emitted whenever the user's balance changes.
+#### Example
+
+```javascript
+kasware.on('balanceChanged', (balance) => {
+  console.log(balance);
+  // example
+    {
+        "address": "kaspa:qp2vyqkuanrqn38362wa5ja93e3se4cv3zqa8yhjalrj24n3g2t52hwx299ku",
+        "balance": {
+            "mature": 1699956916,
+            "pending": 199988333,
+            "outgoing": 0,
+            "matureUtxoCount": 1,
+            "pendingUtxoCount": 1,
+            "stasisUtxoCount": 0
+        }
+    }
+});
+```
