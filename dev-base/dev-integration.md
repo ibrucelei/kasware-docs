@@ -516,7 +516,7 @@ kasware.on('balanceChanged', (balance) => {
 });
 ```
 
-### balanceChanged
+### transactionReplacementResponse
 
 ```javascript
 kasware.on('transactionReplacementResponse', handler: (response: { transactionId:string, replacedTransactionId:string }) => void);
