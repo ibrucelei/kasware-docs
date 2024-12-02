@@ -503,15 +503,36 @@ kasware.on('balanceChanged', (balance) => {
   console.log(balance);
   // example
     {
-        "address": "kaspa:qp2vyqkuanrqn38362wa5ja93e3se4cv3zqa8yhjalrj24n3g2t52hwx299ku",
-        "balance": {
-            "mature": 1699956916,
-            "pending": 199988333,
-            "outgoing": 0,
-            "matureUtxoCount": 1,
-            "pendingUtxoCount": 1,
-            "stasisUtxoCount": 0
+        address: "kaspa:qp2vyqkuanrqn38362wa5ja93e3se4cv3zqa8yhjalrj24n3g2t52hwx299ku",
+        balance: {
+            mature: 1699956916,
+            pending: 199988333,
+            outgoing: 0,
+            matureUtxoCount: 1,
+            pendingUtxoCount: 1,
+            stasisUtxoCount: 0
         }
+    }
+});
+```
+
+### balanceChanged
+
+```javascript
+kasware.on('transactionReplacementResponse', handler: (response: { transactionId:string, replacedTransactionId:string }) => void);
+kasware.removeListener('transactionReplacementResponse', handler: (response: transactionId:string, replacedTransactionId:string ) => void);;
+```
+
+The transactionReplacementResponse will be emitted whenever the user pushes a rbf transaction.
+#### Example
+
+```javascript
+kasware.on('transactionReplacementResponse', (res) => {
+  console.log(res);
+  // example
+    {
+        transactionId: "c353c038d18a2455b72ea02ed47b4e34a60577435f6eba88f940c591c6405ca5",
+        replacedTransactionId: "40a6fa1b3611bb4d34f9d8d91a90f46b3e0b6a5f1b0663de8bbe58bec2f3ecdg"
     }
 });
 ```
