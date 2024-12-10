@@ -347,6 +347,64 @@ try {
 }
 ```
 
+### Demo Code For KRC20 Marketplace
+
+<u>[Demo Code For KRC20 Marketplace](https://github.com/kasware-wallet/dapp-demo/blob/krc20_marketplace/src/App.tsx)</u>
+
+### createKRC20Order
+
+```javascript
+kasware.createKRC20Order({krc20Tick, krc20Amount, kasAmount, psktExtraOutput, priorityFee});
+```
+
+Create a KRC20 Order to sell KRC20 token
+
+#### Parameters
+
+- krc20Tick - string: krc20 token tick
+- krc20Amount - number || string: the amount of KRC20 token to sell, Unit is KRC20 token
+- kasAmount - number: total selling price. Unit is kas
+- psktExtraOutput - {address:string; amount: number }[]:(optional) use psktExtraOutput to create a service fee or other things
+- priorityFee - number:(optional) the network prioity fee. default is 0. Unit is kas.
+
+#### Returns
+
+- Promise - { txJsonString: string, sendCommitTxId:string }: txJsonString is the pskt json string, sendCommitTxId is the txid of sending commit transaction
+
+#### Example:
+
+```javascript
+try {
+      const krc20Tick = "aaaa";
+      const krc20Amount = 10;
+      const kasAmount = 490;
+      const psktExtraOutput = [
+        { address: "kaspatest:qrpygfgeq45h68wz5pk4rtay02w7fwlhax09x4rsqceqq6s3mz6uctlh3a695", amount: 0.2 },
+      ];
+      const priorityFee = 0;
+      const { txJsonString, sendCommitTxId } = await (window as any).kasware.createKRC20Order({
+        krc20Tick,
+        krc20Amount,
+        kasAmount,
+        psktExtraOutput,
+        priorityFee,
+      });
+
+} catch (e) {
+  console.log(e);
+}
+```
+
+
+### buyKRC20Token
+
+<u>[Demo Code For buyKRC20Token()](https://github.com/kasware-wallet/dapp-demo/blob/1c3d992168e434e9d61c704afe1b992ff421625c/src/App.tsx#L619)</u>
+
+
+### cancelKRC20Order
+<u>[Demo Code For cancelKRC20Order()](https://github.com/kasware-wallet/dapp-demo/blob/1c3d992168e434e9d61c704afe1b992ff421625c/src/App.tsx#L642C50-L642C66)</u>
+
+
 ### signMessage
 
 ```javascript
