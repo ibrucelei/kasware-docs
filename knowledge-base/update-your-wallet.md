@@ -1,5 +1,7 @@
 # Update Your Wallet
 
+## chrome extension
+
 Usually, the extension will be auto-updated. If your extension didn't update to the latest version, then you may follow the steps below to update it.
 
 1. Check the current version of your wallet.
@@ -19,3 +21,7 @@ Usually, the extension will be auto-updated. If your extension didn't update to 
 <img src="../images/update-version-2.png">
 
 5. Then your wallet will be updated to the latest version.
+
+## android app
+
+Go to the [kasware-app github repo](https://github.com/kasware-wallet/kasware-app/releases). Download the latest .apk file and install it.
