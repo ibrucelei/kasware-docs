@@ -369,7 +369,7 @@ Create a KRC20 Order to sell KRC20 token
 
 #### Returns
 
-- Promise - { txJsonString: string, sendCommitTxId:string }: txJsonString is the pskt json string, sendCommitTxId is the txid of sending commit transaction
+- Promise - { txJsonString: string, sendCommitTxId:string }: txJsonString is the pskt json string, sendCommitTxId is the commit transaction id of Send OP
 
 #### Example:
 
@@ -400,9 +400,40 @@ try {
 
 <u>[Demo Code For buyKRC20Token()](https://github.com/kasware-wallet/dapp-demo/blob/1c3d992168e434e9d61c704afe1b992ff421625c/src/App.tsx#L619)</u>
 
+```javascript
+kasware.buyKRC20Token({txJsonString, extraOutput, priorityFee});
+```
+
+#### Parameters
+
+- txJsonString - string: a pskt json string from the createKRC20Order() function
+- extraOutput - {address:string; amount: number }[]: (optional) use extraOutput to create a service fee or other things
+- priorityFee - number: (optional) the network prioity fee. default is 0. Unit is kas.
+
+#### Returns
+
+- Promise - txId: transaction id
+
 
 ### cancelKRC20Order
 <u>[Demo Code For cancelKRC20Order()](https://github.com/kasware-wallet/dapp-demo/blob/1c3d992168e434e9d61c704afe1b992ff421625c/src/App.tsx#L642C50-L642C66)</u>
+
+```javascript
+kasware.cancelKRC20Order({krc20Tick, txJsonString, sendCommitTxId });
+```
+
+#### Parameters
+
+- krc20Tick - string: krc20 token tick
+- txJsonString - string: (optional) a pskt json string from the createKRC20Order() function
+- sendCommitTxId - string: (optional) sendCommitTxId is the commit transaction id of Send OP from the createKRC20Order() function
+
+
+
+#### Returns
+
+- Promise - txId: transaction id
+
 
 
 ### signMessage

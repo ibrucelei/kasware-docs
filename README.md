@@ -13,7 +13,13 @@ KasWare Wallet is a non-custodial wallet. We never have access to your funds. Ka
 
 ## Quick Start
 
-Click the [Download](https://chrome.google.com/webstore/detail/hklhheigdmpoolooomdihmhlpjjdbklf) button, which will take you to the chrome store to download the extension. 
+### chrome extension
+
+Go to the [chrome extension](https://chrome.google.com/webstore/detail/hklhheigdmpoolooomdihmhlpjjdbklf) webstore and install kasware wallet extension.
+
+### android app
+
+Go to the [kasware-app github repo](https://github.com/kasware-wallet/kasware-app/releases). Download the latest .apk file and install it.
 
 ## Address Types
 
@@ -37,7 +43,7 @@ For KasWare Wallet users, we strongly suggest choosing 111111 coin type, which i
 
 ## Donation
 
-Our devfund address is ***kaspa:qz8e8uheecv2a5t52whql56z9zhnpv9zdl3kd92daaexj4uvkkl8uhnm395wk***
+Our devfund address is **_kaspa:qz8e8uheecv2a5t52whql56z9zhnpv9zdl3kd92daaexj4uvkkl8uhnm395wk_**
 
 Thanks for your support!
 
