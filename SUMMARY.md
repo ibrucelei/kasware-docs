@@ -10,6 +10,7 @@
 * [Set your own RPC](knowledge-base/set-your-own-rpc.md)
 * [Update your wallet](knowledge-base/update-your-wallet.md)
 * [Retrieve incomplete KRC20 fund](knowledge-base/retrieve-incomplete-KRC20-fund.md)
+* [Name recognized and resolved](knowledge-base/name-recognized-and-resolved.md)
 
 ## ❓ FAQ
 * [Address & balance issues](faq/address-balance-issues.md)
