@@ -72,7 +72,8 @@ try {
 kasware.getAccounts();
 ```
 
-Get address of current account
+Get address of current account.
+It's also used to certify if the user is connected, which should be called first.
 
 #### Parameters
 
@@ -159,6 +160,7 @@ kasware.switchNetwork(network);
 ```
 
 switch network
+It's disable in the mobile app.
 
 #### Parameters
 
