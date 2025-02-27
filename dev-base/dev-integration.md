@@ -328,6 +328,7 @@ Send KAS
 - sompi - number: the sompi to send
 - options - object: (optional)
   - priorityFee - number: the network prioity fee. default is 0. Unit is sompi
+  - payload - string: payload for transactions
 
 #### Returns
 
