@@ -31,7 +31,7 @@ We recommend that you provide a button to allow the user to connect KasWare Wall
 kasware.requestAccounts();
 ```
 
-### Demo
+### Demo Code
 
 <u>[Demo source code](https://github.com/kasware-wallet/dapp-demo)</u>
 ​​
@@ -345,6 +345,66 @@ try {
     1000
   );
   console.log(txid);
+} catch (e) {
+  console.log(e);
+}
+```
+
+### signPskt
+
+```javascript
+kasware.signPskt({txJsonString, options});
+```
+
+sign Pskt
+
+#### Parameters
+
+- txJsonString  - string: a pskt json string 
+- options - object:
+  - signInputs - object array. 
+    - index - number: index of input to sign
+    - sighashType - number: the sighash type. 
+
+
+
+#### Returns
+
+- Promise - string: signed tx json string
+
+#### Example
+
+```javascript
+try {
+    /**
+   * Kaspa Sighash types allowed by consensus
+   * @category Consensus https://kaspa-mdbook.aspectron.com/transactions/sighashes.html
+   */
+  enum SighashType {
+    All = 0b00000001, // 1
+    None = 0b00000010, // 2
+    Single = 0b00000100, // 4
+    AllAnyOneCanPay = 0b10000001, // 128 + 1 = 129
+    NoneAnyOneCanPay = 0b10000010, // 128 + 2 = 130
+    SingleAnyOneCanPay = 0b10000100, // 128 + 4 = 132
+  }
+  const pskt = `{"id":"6664c0a75a041dd1f591c5ecc539875a99e5a49aaacb2e1ef04e354d0e69c271","version":0,"inputs":[{"transactionId":"006866a332181f4e3aab471af6435a645f5ca33697633fa20233af59ae4e8b2f","index":1,"sequence":"0","sigOpCount":1,"signatureScript":"","utxo":{"address":"kaspatest:qz9dvce5d92czd6t6msm5km3p5m9dyxh5av9xkzjl6pz8hhvc4q7wqg8njjyp","amount":"99986271","scriptPublicKey":"0000208ad66334695581374bd6e1ba5b710d365690d7a758535852fe8223deecc541e7ac","blockDaaScore":"87857448","isCoinbase":false}},{"transactionId":"c46a6fcd4746bbe60a68bf2efb543a65685f81b72440fcaa271cf86b25720d31","index":0,"sequence":"0","sigOpCount":1,"signatureScript":"","utxo":{"address":"kaspatest:qz9dvce5d92czd6t6msm5km3p5m9dyxh5av9xkzjl6pz8hhvc4q7wqg8njjyp","amount":"49100001963","scriptPublicKey":"0000208ad66334695581374bd6e1ba5b710d365690d7a758535852fe8223deecc541e7ac","blockDaaScore":"87513486","isCoinbase":false}}],"outputs":[{"value":"110000000","scriptPublicKey":"000020ab4b389073830cb400647fb8dc116e6b8a71c17e1c09ba7eaef2ddd78616f306ac"},{"value":"49089970826","scriptPublicKey":"0000208ad66334695581374bd6e1ba5b710d365690d7a758535852fe8223deecc541e7ac"}],"subnetworkId":"0000000000000000000000000000000000000000","lockTime":"0","gas":"0","mass":"3154","payload":""}`
+ const signature = await (window as any).kasware.signPskt({
+       txJsonString: pskt,
+       options: {
+                signInputs: [
+                  {
+                    index: 0,
+                    sighashType: SighashType.All,
+                  },
+                  {
+                    index: 1,
+                    sighashType: SighashType.All,
+                  },
+                ],
+              },
+       });
+  console.log("signed tx", signature);
 } catch (e) {
   console.log(e);
 }
