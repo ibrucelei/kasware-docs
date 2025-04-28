@@ -316,6 +316,72 @@ try {
   }
 ```
 
+### getUtxoEntries
+
+```javascript
+kasware.getUtxoEntries();
+```
+
+Get UTXO entries
+
+#### Parameters
+
+none
+
+#### Returns
+
+- Promise - Array of Object:
+
+#### Example
+
+```javascript
+try {
+  let res = await window.kasware.getUtxoEntries();
+  console.log(res)
+} catch (e) {
+  console.log(e);
+}
+​
+> [
+    {
+        "entry": {
+            "address": {
+                "version": "PubKey",
+                "prefix": "kaspa",
+                "payload": "qp2vyqkuanrqn38362wa5ja93e3se4cv3zqa8yhjalrj24n3g2t52hwx299ku"
+            },
+            "outpoint": {
+                "transactionId": "3219574931ae6d7a3152c7708443c41861292347e8729a0e59b5058357935d38",
+                "index": 0
+            },
+            "amount": 639799290,
+            "scriptPublicKey": {
+                "version": 0,
+                "script": "2054c202dcecc609c4f1d29dda4ba58e630cd70c8881d392f2efc7255671429745ac"
+            },
+            "blockDaaScore": 109555764,
+            "isCoinbase": false
+        },
+        "outpoint": {
+            "transactionId": "3219574931ae6d7a3152c7708443c41861292347e8729a0e59b5058357935d38",
+            "index": 0
+        },
+        "address": {
+            "version": "PubKey",
+            "prefix": "kaspa",
+            "payload": "qp2vyqkuanrqn38362wa5ja93e3se4cv3zqa8yhjalrj24n3g2t52hwx299ku"
+        },
+        "amount": 639799290,
+        "isCoinbase": false,
+        "blockDaaScore": 109555764,
+        "scriptPublicKey": {
+            "version": 0,
+            "script": "2054c202dcecc609c4f1d29dda4ba58e630cd70c8881d392f2efc7255671429745ac"
+        }
+    }
+]
+```
+
 ### sendKaspa
 
 ```javascript
