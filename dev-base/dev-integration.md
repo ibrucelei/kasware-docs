@@ -521,6 +521,16 @@ try {
 }
 ```
 
+
+### submitCommitReveal
+
+```javascript
+kasware.submitCommitReveal(commit, reveal, script, networkId);
+```
+<u>[Demo Code For submitCommitReveal](https://github.com/kasware-wallet/dapp-demo/blob/a17abd1dcc8153a25f28aff07a02fd317637842d/src/App.tsx#L1197)</u>
+
+
+
 ### Demo Code For KRC20 Marketplace
 
 <u>[Demo Code For KRC20 Marketplace](https://github.com/kasware-wallet/dapp-demo/blob/krc20_marketplace/src/App.tsx)</u>
