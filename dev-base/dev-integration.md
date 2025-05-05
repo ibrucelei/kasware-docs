@@ -476,6 +476,51 @@ try {
 }
 ```
 
+### buildScript
+
+```javascript
+kasware.buildScript({type, data});
+```
+
+build inscription script
+
+#### Parameters
+
+- type  - string: script type. "KRC20" | "KNS" | "KSPR_KRC721"
+- data - string: the data to inscribe
+
+
+
+#### Returns
+
+- Promise - object: inscription string and p2sh address
+
+#### Example
+
+```javascript
+try {
+
+    enum BuildScriptType {
+      KRC20 = "KRC20",
+      KNS = "KNS",
+      KSPR_KRC721 = "KSPR_KRC721",
+    }
+    const json = {
+      p: "krc-20",
+      op: "mint",
+      tick: "test",
+    };
+    const data = JSON.stringify(data, null, 0);
+    const { script, p2shAddress } = await (window as any).kasware.buildScript({
+      type: BuildScriptType.KRC20,
+      data: data,
+    });
+  console.log("inscription script and p2sh address", script, p2shAddress);
+} catch (e) {
+  console.log(e);
+}
+```
+
 ### Demo Code For KRC20 Marketplace
 
 <u>[Demo Code For KRC20 Marketplace](https://github.com/kasware-wallet/dapp-demo/blob/krc20_marketplace/src/App.tsx)</u>
