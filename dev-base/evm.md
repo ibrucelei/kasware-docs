@@ -13,4 +13,4 @@ To detect if KasWare wallet is installed, an application should check for an add
 const isKasWareInstalled= window?.kasware?.ethereum?.isKasWare;
 ```
 
-If KasWare wallet is not installed, we recommend you redirect your users to our kasware officail website[https://www.kasware.xyz]({https://www.kasware.xyz}) to download the wallet. 
+If KasWare wallet is not installed, we recommend you redirect your users to our kasware officail website[https://www.kasware.xyz](https://www.kasware.xyz) to download the wallet. 
