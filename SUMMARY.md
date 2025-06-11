@@ -17,4 +17,5 @@
 * [Export/Import Seedphrase & Privatekey](faq/export-import-seedphrase-and-privatekey.md)
 
 ## 🛠️ DEV BASE
-* [Dev integration](dev-base/dev-integration.md)
+* [Kaspa integration](dev-base/kaspa.md)
+* [EVM integration](dev-base/evm.md)
