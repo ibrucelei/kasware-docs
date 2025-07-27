@@ -6,6 +6,9 @@ Welcome to KasWare's integration documentation. This documentation is for learni
 ## Getting Started
 
 First of all, install KasWare Wallet on your development machine. Once KasWare Wallet is installed and running, you should find that new browser tabs have a window.kasware object available in the developer console. This is how your website will interact with KasWare Wallet.
+### Demo Code
+
+<u>[Demo source code](https://github.com/kasware-wallet/dapp-demo)</u>
 
 ### Browser Detection
 
@@ -30,10 +33,6 @@ We recommend that you provide a button to allow the user to connect KasWare Wall
 ```javascript
 kasware.requestAccounts();
 ```
-
-### Demo Code
-
-<u>[Demo source code](https://github.com/kasware-wallet/dapp-demo)</u>
 ​​
 
 ## Methods
