@@ -631,7 +631,7 @@ sign message
 #### Parameters
 
 - msg - string: a string to sign
-- type - string: (Optional) "ecdsa" | "bip322-simple". default is "ecdsa"
+- type - string: "ecdsa" | "schnorr" (optional) the current active account type.
 
 #### Returns
 
