@@ -6,6 +6,7 @@ Welcome to KasWare's integration documentation. This documentation is for learni
 ## Getting Started
 
 First of all, install KasWare Wallet on your development machine. Once KasWare Wallet is installed and running, you should find that new browser tabs have a window.kasware object available in the developer console. This is how your website will interact with KasWare Wallet.
+
 ### Demo Code
 
 <u>[Demo source code](https://github.com/kasware-wallet/dapp-demo)</u>
@@ -15,8 +16,8 @@ First of all, install KasWare Wallet on your development machine. Once KasWare W
 To verify if the browser is running KasWare Wallet, copy and paste the code snippet below in the developer console of your web browser:
 
 ```javascript
-if (typeof window.kasware !== 'undefined') {
-  console.log('KasWare Wallet is installed!');
+if (typeof window.kasware !== "undefined") {
+  console.log("KasWare Wallet is installed!");
 }
 ```
 
@@ -33,6 +34,7 @@ We recommend that you provide a button to allow the user to connect KasWare Wall
 ```javascript
 kasware.requestAccounts();
 ```
+
 ​​
 
 ## Methods
@@ -406,7 +408,7 @@ Send KAS
 ```javascript
 try {
   let txid = await window.kasware.sendKaspa(
-    'kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq',
+    "kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7pkxzzxj26hcsq",
     1000
   );
   console.log(txid);
@@ -418,20 +420,18 @@ try {
 ### signPskt
 
 ```javascript
-kasware.signPskt({txJsonString, options});
+kasware.signPskt({ txJsonString, options });
 ```
 
 sign Pskt
 
 #### Parameters
 
-- txJsonString  - string: a pskt json string 
+- txJsonString - string: a pskt json string
 - options - object:
-  - signInputs - object array. 
+  - signInputs - object array.
     - index - number: index of input to sign
-    - sighashType - number: the sighash type. 
-
-
+    - sighashType - number: the sighash type.
 
 #### Returns
 
@@ -478,17 +478,15 @@ try {
 ### buildScript
 
 ```javascript
-kasware.buildScript({type, data});
+kasware.buildScript({ type, data });
 ```
 
 build inscription script
 
 #### Parameters
 
-- type  - string: script type. "KRC20" | "KNS" | "KSPR_KRC721"
+- type - string: script type. "KRC20" | "KNS" | "KSPR_KRC721"
 - data - string: the data to inscribe
-
-
 
 #### Returns
 
@@ -520,15 +518,13 @@ try {
 }
 ```
 
-
 ### submitCommitReveal
 
 ```javascript
 kasware.submitCommitReveal(commit, reveal, script, networkId);
 ```
+
 <u>[Demo Code For submitCommitReveal](https://github.com/kasware-wallet/dapp-demo/blob/a17abd1dcc8153a25f28aff07a02fd317637842d/src/App.tsx#L1197)</u>
-
-
 
 ### Demo Code For KRC20 Marketplace
 
@@ -537,7 +533,7 @@ kasware.submitCommitReveal(commit, reveal, script, networkId);
 ### createKRC20Order
 
 ```javascript
-kasware.createKRC20Order({krc20Tick, krc20Amount, kasAmount, psktExtraOutput, priorityFee});
+kasware.createKRC20Order({ krc20Tick, krc20Amount, kasAmount, psktExtraOutput, priorityFee });
 ```
 
 Create a KRC20 Order to sell KRC20 token
@@ -578,13 +574,12 @@ try {
 }
 ```
 
-
 ### buyKRC20Token
 
 <u>[Demo Code For buyKRC20Token()](https://github.com/kasware-wallet/dapp-demo/blob/1c3d992168e434e9d61c704afe1b992ff421625c/src/App.tsx#L619)</u>
 
 ```javascript
-kasware.buyKRC20Token({txJsonString, extraOutput, priorityFee});
+kasware.buyKRC20Token({ txJsonString, extraOutput, priorityFee });
 ```
 
 #### Parameters
@@ -597,12 +592,12 @@ kasware.buyKRC20Token({txJsonString, extraOutput, priorityFee});
 
 - Promise - txId: transaction id
 
-
 ### cancelKRC20Order
+
 <u>[Demo Code For cancelKRC20Order()](https://github.com/kasware-wallet/dapp-demo/blob/1c3d992168e434e9d61c704afe1b992ff421625c/src/App.tsx#L642C50-L642C66)</u>
 
 ```javascript
-kasware.cancelKRC20Order({krc20Tick, txJsonString, sendCommitTxId });
+kasware.cancelKRC20Order({ krc20Tick, txJsonString, sendCommitTxId });
 ```
 
 #### Parameters
@@ -611,18 +606,16 @@ kasware.cancelKRC20Order({krc20Tick, txJsonString, sendCommitTxId });
 - txJsonString - string: (optional) a pskt json string from the createKRC20Order() function
 - sendCommitTxId - string: (optional) sendCommitTxId is the commit transaction id of Send OP from the createKRC20Order() function
 
-
-
 #### Returns
 
 - Promise - txId: transaction id
 
-
-
 ### signMessage
 
+<u>[Demo Code For signMessage()](https://github.com/kasware-wallet/dapp-demo/blob/adfc36f22c52c28389b01e5be1c04bf1b5558445/src/App.tsx#L326)</u>
+
 ```javascript
-kasware.signMessage(msg[, type])
+kasware.signMessage(msg, { type, noAuxRand });
 ```
 
 sign message
@@ -630,7 +623,8 @@ sign message
 #### Parameters
 
 - msg - string: a string to sign
-- type - string: (Optional) "ecdsa" | "bip322-simple". default is "ecdsa"
+- type - string: (Optional) "auto" | "schnorr" | "ecdsa". default is "auto"
+- noAuxRand - boolean: (Optional) if true, do not use aux rand. default is false
 
 #### Returns
 
@@ -653,14 +647,17 @@ try {
 const pubkey = "026887958bcc4cb6f8c04ea49260f0d10e312c41baf485252953b14724db552aac";
 const message = "abcdefghijk123456789";
 const signature = "G+LrYa7T5dUMDgQduAErw+i6ebK4GqTXYVWIDM+snYk7Yc6LdPitmaqM6j+iJOeID1CsMXOJFpVopvPiHBdulkE=";
-const result = kasware.verifyMessage(pubkey,message,signature);
-console.log(result);
-​
+const resultSchnorr = kasware.verifyMessage(pubkey,message,signature);
+console.log(resultSchnorr);
+const resultECDSA = kasware.verifyMessageECDSA(pubkey,message,signature);
+console.log(resultECDSA);
+
+
 > true
 ​
-// sign by bip322-simple
+// sign by ECDSA
 try {
-  let res = await window.kasware.signMessage("abcdefghijk123456789","bip322-simple");
+  let res = await window.kasware.signMessage("abcdefghijk123456789", { type:"ecdsa" });
   console.log(res)
 } catch (e) {
   console.log(e);
@@ -695,10 +692,7 @@ try {
   const deployJsonString =
     '{"p":"KRC-20","op":"deploy","tick":"BBBB","max":"21000000000000000000000000000000","lim":"100000000000000000000", "pre":"100000000000000000000"}';
   const type = 2;
-  let txid = await window.kasware.signKRC20Transaction(
-    inscribeJsonString,
-    type
-  );
+  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type);
   console.log(txid);
 } catch (e) {
   console.log(e);
@@ -711,10 +705,7 @@ try {
 try {
   const inscribeJsonString = '{"p":"KRC-20","op":"mint","tick":"XXXX"}';
   const type = 3;
-  let txid = await window.kasware.signKRC20Transaction(
-    inscribeJsonString,
-    type
-  );
+  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type);
   console.log(txid);
 } catch (e) {
   console.log(e);
@@ -728,12 +719,8 @@ try {
   const transferJsonString =
     '{"p":"KRC-20","op":"transfer","tick":"RBMV","amt":"10000000000","to":"kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7"}';
   const type = 4;
-  const destAddr = 'kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7';
-  let txid = await window.kasware.signKRC20Transaction(
-    inscribeJsonString,
-    type,
-    destAddr
-  );
+  const destAddr = "kaspa:qzhkxxaully72gk23lyn7z3d9tdzdpw48ujsavrwlulekyk7";
+  let txid = await window.kasware.signKRC20Transaction(inscribeJsonString, type, destAddr);
   console.log(txid);
 } catch (e) {
   console.log(e);
@@ -768,6 +755,7 @@ kasware.removeListener('balanceChanged', handler: (balance: IBalance) => void);;
 ```
 
 The balaneChanged will be emitted whenever the user's balance changes.
+
 #### Example
 
 ```javascript
@@ -796,6 +784,7 @@ kasware.removeListener('transactionReplacementResponse', handler: (response: tra
 ```
 
 The transactionReplacementResponse will be emitted whenever the user pushes a rbf transaction.
+
 #### Example
 
 ```javascript
