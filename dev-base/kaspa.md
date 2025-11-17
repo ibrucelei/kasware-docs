@@ -633,7 +633,7 @@ sign message
 #### Example
 
 ```javascript
-// sign by ecdsa
+// sign by auto (current address type)
 try {
   let res = await window.kasware.signMessage("abcdefghijk123456789");
   console.log(res)
